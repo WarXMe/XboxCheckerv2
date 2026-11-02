@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: xbox-checker-bot
+    env: python
+    plan: starter          # $7/mo — or use 'standard' for more power
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false         # set this in Render dashboard → Environment
+      - key: WEBHOOK_URL
+        sync: false         # set to: https://YOUR-APP-NAME.onrender.com
+      - key: CAPTURED_BY
+        value: "@YourUsername"
+      - key: ADMIN_IDS
+        value: "123456789"
+      - key: DEFAULT_THREADS
+        value: "100"
+      - key: PORT
+        value: "10000"
+    disk:
+      name: botdata
+      mountPath: /opt/render/project/src
+      sizeGB: 1
