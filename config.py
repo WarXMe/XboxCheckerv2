@@ -1,7 +1,7 @@
 import os
 
 # ─── Bot Settings ─────────────────────────────────────────────────────────────
-BOT_TOKEN    = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN    = os.getenv("BOT_TOKEN", "9091153277:AAEQeCL1AwooOzUJgJEP7tTEyVDtuW82UNk")
 WEBHOOK_URL  = os.getenv("WEBHOOK_URL", "https://your-app.onrender.com")  # your render URL
 WEBHOOK_PATH = "/webhook"
 PORT         = int(os.getenv("PORT", 10000))
